@@ -1,0 +1,18 @@
+# Ignore by Default
+**/.git
+**/.svn
+**/.hg
+**/node_modules
+.history
+.husky
+.vscode
+
+# Ignore artifacts
+build
+dist
+coverage
+
+# Ignore config files
+tsconfig.json
+vite.config.ts
+jest.config.ts
