@@ -1,28 +1,21 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-disable no-undef */
-const purgecss = require("@fullhuman/postcss-purgecss");
-const cssnano = require("cssnano");
-const postcssPresetEnv = require("postcss-preset-env");
 
 module.exports = {
-  plugins: [
-    require("tailwindcss"),
-    cssnano({
-      preset: "default",
-    }),
-    purgecss({
-      content: ["./**/*.html"],
-    }),
-    postcssPresetEnv({
+  plugins: {
+    "postcss-preset-env": {
       /* use stage 3 features + css nesting rules */
       stage: 3,
       features: {
-        "nesting-rules": true,
-        "color-mod-function": { unresolved: "warn" },
+        "nesting-rules": false
       },
       browsers: "last 2 versions",
-    }),
-    require("postcss-simple-vars"),
-    require("autoprefixer"),
-  ],
-};
+    },
+    "postcss-simple-vars": {},
+    "postcss-import": {},
+    "postcss-extend": {},
+    "tailwindcss/nesting": {},
+    tailwindcss: {},
+    autoprefixer: {},
+    stylefmt: {},
+    ...(process.env.NODE_ENV === "production" ? {cssnano: {preset: "default"}} : {})
+  }
+}

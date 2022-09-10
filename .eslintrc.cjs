@@ -7,6 +7,7 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
     "prettier",
   ],
   overrides: [],
@@ -20,7 +21,11 @@ module.exports = {
     "prettier/prettier": [
       "error",
       { endOfLine: "auto" },
-      { usePrettierrc: true },
+      { usePrettierrc: true }, 
+      {
+        "singleQuote": false,
+        "parser": "flow"
+      }
     ],
     "import/no-extraneous-dependencies": "off",
     "import/prefer-default-export": "off",

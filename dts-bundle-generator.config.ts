@@ -7,7 +7,7 @@ const getPackageName = () => {
 export const config = {
   entries: [
     {
-      filePath: "./src/index.ts",
+      filePath: "./src/main.ts",
       outFile: `./dist/${getPackageName()}.d.ts`,
       noCheck: false,
     },

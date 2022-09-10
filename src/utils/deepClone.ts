@@ -1,0 +1,1 @@
+export default (obj:object):object => JSON.parse(JSON.stringify(obj));

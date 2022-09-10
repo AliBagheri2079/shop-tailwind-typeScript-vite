@@ -4,13 +4,17 @@ The project is built on top of Vite and prepared for writing libraries in TypeSc
 
 ## Features
 
-- Hybrid support - CommonJS and ESM modules
-- IIFE bundle for direct browser support without bundler
+- Postcss, autoprefixer, cssnano and ... style configuration
+- Tailwind utility framework - Hero icons, Mamba Ui
 - Typings bundle
 - ESLint - scripts linter
 - Stylelint - styles linter
 - Prettier - formatter
 - Husky + lint-staged - pre-commit git hook set up for formatting
+
+## Api
+
+In this project i use [FakeStoreApi](https://fakestoreapi.com/docs) who created by a persian man and very tanks to him
 
 ## GitHub Template
 
